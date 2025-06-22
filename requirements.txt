@@ -1,0 +1,8 @@
+requests 
+schedule 
+yfinance 
+pandas 
+matplotlib 
+ta 
+beautifulsoup4 
+pyinstaller 
