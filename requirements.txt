@@ -6,3 +6,5 @@ matplotlib
 ta 
 beautifulsoup4 
 pyinstaller 
+feedparser
+textblob
