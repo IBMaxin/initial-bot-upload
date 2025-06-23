@@ -1,0 +1,24 @@
+name: Build ZIP and Upload
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-zip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create ZIP archive
+        run: |
+          zip -r bot_package.zip . -x "*.git*" "*.venv*" "__pycache__/*"
+
+      - name: Upload ZIP as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ironvault-bot-zip
+          path: bot_package.zip
+
